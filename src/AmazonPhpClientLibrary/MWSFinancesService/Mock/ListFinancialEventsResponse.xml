@@ -1034,6 +1034,20 @@
                         <CurrencyAmount>100</CurrencyAmount>
                     </ShippingTax>
                     <MarketplaceName>String</MarketplaceName>
+                    <RetrochargeTaxWithheldList>
+                        <TaxWithheldComponent>
+                        <TaxCollectionModel>String</TaxCollectionModel>
+                        <TaxesWithheld>
+                        <ChargeComponent>
+                        <ChargeType>String</ChargeType>
+                        <ChargeAmount>
+                        <CurrencyCode>String</CurrencyCode>
+                        <CurrencyAmount>100</CurrencyAmount>
+                        </ChargeAmount>
+                        </ChargeComponent>
+                        </TaxesWithheld>
+                        </TaxWithheldComponent>
+                    </RetrochargeTaxWithheldList>
                 </RetrochargeEvent>
             </RetrochargeEventList>
             <RentalTransactionEventList>
@@ -1337,6 +1351,80 @@
                     </FeeList>
                 </ImagingServicesFeeEvent>
             </ImagingServicesFeeEventList>
+            <NetworkComminglingTransactionEventList>
+                <NetworkComminglingTransactionEvent>
+                    <TransactionType>String</TransactionType>
+                    <PostedDate>1969-07-21T02:56:03Z</PostedDate>
+                    <NetCoTransactionID>String</NetCoTransactionID>
+                    <SwapReason>String</SwapReason>
+                    <ASIN>String</ASIN>
+                    <MarketplaceId>String</MarketplaceId>
+                    <TaxExclusiveAmount>
+                        <CurrencyCode>String</CurrencyCode>
+                        <CurrencyAmount>100</CurrencyAmount>
+                    </TaxExclusiveAmount>
+                    <TaxAmount>
+                        <CurrencyCode>String</CurrencyCode>
+                        <CurrencyAmount>100</CurrencyAmount>
+                    </TaxAmount>
+                </NetworkComminglingTransactionEvent>
+            </NetworkComminglingTransactionEventList>
+            <AffordabilityExpenseEventList>
+                <AffordabilityExpenseEvent>
+                    <AmazonOrderId>String</AmazonOrderId>
+                    <PostedDate>1969-07-21T02:56:03Z</PostedDate>
+                    <MarketplaceId>String</MarketplaceId>
+                    <TransactionType>String</TransactionType>
+                    <BaseExpense>
+                        <CurrencyCode>String</CurrencyCode>
+                        <CurrencyAmount>100</CurrencyAmount>
+                    </BaseExpense>
+                    <TaxTypeCGST>
+                        <CurrencyCode>String</CurrencyCode>
+                        <CurrencyAmount>100</CurrencyAmount>
+                    </TaxTypeCGST>
+                    <TaxTypeSGST>
+                        <CurrencyCode>String</CurrencyCode>
+                        <CurrencyAmount>100</CurrencyAmount>
+                    </TaxTypeSGST>
+                    <TaxTypeIGST>
+                        <CurrencyCode>String</CurrencyCode>
+                        <CurrencyAmount>100</CurrencyAmount>
+                    </TaxTypeIGST>
+                    <TotalExpense>
+                        <CurrencyCode>String</CurrencyCode>
+                        <CurrencyAmount>100</CurrencyAmount>
+                    </TotalExpense>
+                </AffordabilityExpenseEvent>
+            </AffordabilityExpenseEventList>
+            <AffordabilityExpenseReversalEventList>
+                <AffordabilityExpenseEvent>
+                    <AmazonOrderId>String</AmazonOrderId>
+                    <PostedDate>1969-07-21T02:56:03Z</PostedDate>
+                    <MarketplaceId>String</MarketplaceId>
+                    <TransactionType>String</TransactionType>
+                    <BaseExpense>
+                        <CurrencyCode>String</CurrencyCode>
+                        <CurrencyAmount>100</CurrencyAmount>
+                    </BaseExpense>
+                    <TaxTypeCGST>
+                        <CurrencyCode>String</CurrencyCode>
+                        <CurrencyAmount>100</CurrencyAmount>
+                    </TaxTypeCGST>
+                    <TaxTypeSGST>
+                        <CurrencyCode>String</CurrencyCode>
+                        <CurrencyAmount>100</CurrencyAmount>
+                    </TaxTypeSGST>
+                    <TaxTypeIGST>
+                        <CurrencyCode>String</CurrencyCode>
+                        <CurrencyAmount>100</CurrencyAmount>
+                    </TaxTypeIGST>
+                    <TotalExpense>
+                        <CurrencyCode>String</CurrencyCode>
+                        <CurrencyAmount>100</CurrencyAmount>
+                    </TotalExpense>
+                </AffordabilityExpenseEvent>
+            </AffordabilityExpenseReversalEventList>
         </FinancialEvents>
     </ListFinancialEventsResult>
    <ResponseMetadata>
