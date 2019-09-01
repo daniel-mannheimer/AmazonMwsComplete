@@ -1,6 +1,6 @@
 <?php
 /*******************************************************************************
- * Copyright 2009-2018 Amazon Services. All Rights Reserved.
+ * Copyright 2009-2019 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License"); 
  *
  * You may not use this file except in compliance with the License. 
@@ -13,8 +13,8 @@
  * @category Amazon
  * @package  MWS Merchant Fulfillment Service
  * @version  2015-06-01
- * Library Version: 2018-10-31
- * Generated: Mon Oct 22 23:32:33 UTC 2018
+ * Library Version: 2016-03-30
+ * Generated: Tue Jul 09 13:26:52 PDT 2019
  */
 
 /**
@@ -33,6 +33,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
  * <li>OrderItemId: string</li>
  * <li>Quantity: int</li>
  * <li>transparencyCodeList: array</li>
+ * <li>ItemLevelSellerInputsList: array</li>
  *
  * </ul>
  */
@@ -45,6 +46,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     'OrderItemId' => array('FieldValue' => null, 'FieldType' => 'string'),
     'Quantity' => array('FieldValue' => null, 'FieldType' => 'int'),
     'transparencyCodeList' => array('FieldValue' => array(), 'FieldType' => array('string'), 'ListMemberName' => 'member'),
+    'ItemLevelSellerInputsList' => array('FieldValue' => array(), 'FieldType' => array('MWSMerchantFulfillmentService_Model_AdditionalSellerInputs'), 'ListMemberName' => 'member'),
     );
     parent::__construct($data);
     }
@@ -201,6 +203,70 @@ require_once (dirname(__FILE__) . '/../Model.php');
         foreach (func_get_args() as $transparencyCodeList)
         {
             $this->_fields['transparencyCodeList']['FieldValue'][] = $transparencyCodeList;
+        }
+        return $this;
+    }
+
+    /**
+     * Get the value of the ItemLevelSellerInputsList property.
+     *
+     * @return List<AdditionalSellerInputs> ItemLevelSellerInputsList.
+     */
+    public function getItemLevelSellerInputsList()
+    {
+        if ($this->_fields['ItemLevelSellerInputsList']['FieldValue'] == null)
+        {
+            $this->_fields['ItemLevelSellerInputsList']['FieldValue'] = array();
+        }
+        return $this->_fields['ItemLevelSellerInputsList']['FieldValue'];
+    }
+
+    /**
+     * Set the value of the ItemLevelSellerInputsList property.
+     *
+     * @param array itemLevelSellerInputsList
+     * @return this instance
+     */
+    public function setItemLevelSellerInputsList($value)
+    {
+        if (!$this->_isNumericArray($value)) {
+            $value = array ($value);
+        }
+        $this->_fields['ItemLevelSellerInputsList']['FieldValue'] = $value;
+        return $this;
+    }
+
+    /**
+     * Clear ItemLevelSellerInputsList.
+     */
+    public function unsetItemLevelSellerInputsList()
+    {
+        $this->_fields['ItemLevelSellerInputsList']['FieldValue'] = array();
+    }
+
+    /**
+     * Check to see if ItemLevelSellerInputsList is set.
+     *
+     * @return true if ItemLevelSellerInputsList is set.
+     */
+    public function isSetItemLevelSellerInputsList()
+    {
+                return !empty($this->_fields['ItemLevelSellerInputsList']['FieldValue']);
+            }
+
+    /**
+     * Add values for ItemLevelSellerInputsList, return this.
+     *
+     * @param itemLevelSellerInputsList
+     *             New values to add.
+     *
+     * @return This instance.
+     */
+    public function withItemLevelSellerInputsList()
+    {
+        foreach (func_get_args() as $ItemLevelSellerInputsList)
+        {
+            $this->_fields['ItemLevelSellerInputsList']['FieldValue'][] = $ItemLevelSellerInputsList;
         }
         return $this;
     }

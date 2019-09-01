@@ -1053,7 +1053,7 @@ class MarketplaceWebService_Client implements MarketplaceWebService_Interface
     return array (
       CURLOPT_POST => true,
       CURLOPT_USERAGENT => $this->config['UserAgent'],
-      CURLOPT_VERBOSE => false,
+      CURLOPT_VERBOSE => true,
       CURLOPT_HEADERFUNCTION => array ($this, 'headerCallback'),
       CURLOPT_RETURNTRANSFER => true,
       CURLOPT_SSL_VERIFYPEER => true,
@@ -1446,6 +1446,9 @@ class MarketplaceWebService_Client implements MarketplaceWebService_Interface
       }
       if ($request->isSetContentMd5()) {
               $parameters['ContentMD5Value'] = $request->getContentMd5();
+      }
+      if ($request->isSetFeedOptions()) {
+              $parameters['FeedOptions'] = $request->getFeedOptions();
       }
 
       $headers = array();

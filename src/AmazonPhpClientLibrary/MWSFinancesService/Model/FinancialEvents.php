@@ -1,6 +1,6 @@
 <?php
 /*******************************************************************************
- * Copyright 2009-2018 Amazon Services. All Rights Reserved.
+ * Copyright 2009-2019 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License"); 
  *
  * You may not use this file except in compliance with the License. 
@@ -13,8 +13,8 @@
  * @category Amazon
  * @package  MWS Finances Service
  * @version  2015-05-01
- * Library Version: 2018-03-22
- * Generated: Thu Mar 15 07:12:28 GMT 2018
+ * Library Version: 2019-02-25
+ * Generated: Wed Mar 13 08:17:11 PDT 2019
  */
 
 /**
@@ -50,6 +50,9 @@ require_once (dirname(__FILE__) . '/../Model.php');
  * <li>FBALiquidationEventList: array</li>
  * <li>CouponPaymentEventList: array</li>
  * <li>ImagingServicesFeeEventList: array</li>
+ * <li>NetworkComminglingTransactionEventList: array</li>
+ * <li>AffordabilityExpenseEventList: array</li>
+ * <li>AffordabilityExpenseReversalEventList: array</li>
  *
  * </ul>
  */
@@ -79,6 +82,9 @@ require_once (dirname(__FILE__) . '/../Model.php');
     'FBALiquidationEventList' => array('FieldValue' => array(), 'FieldType' => array('MWSFinancesService_Model_FBALiquidationEvent'), 'ListMemberName' => 'FBALiquidationEvent'),
     'CouponPaymentEventList' => array('FieldValue' => array(), 'FieldType' => array('MWSFinancesService_Model_CouponPaymentEvent'), 'ListMemberName' => 'CouponPaymentEvent'),
     'ImagingServicesFeeEventList' => array('FieldValue' => array(), 'FieldType' => array('MWSFinancesService_Model_ImagingServicesFeeEvent'), 'ListMemberName' => 'ImagingServicesFeeEvent'),
+    'NetworkComminglingTransactionEventList' => array('FieldValue' => array(), 'FieldType' => array('MWSFinancesService_Model_NetworkComminglingTransactionEvent'), 'ListMemberName' => 'NetworkComminglingTransactionEvent'),
+    'AffordabilityExpenseEventList' => array('FieldValue' => array(), 'FieldType' => array('MWSFinancesService_Model_AffordabilityExpenseEvent'), 'ListMemberName' => 'AffordabilityExpenseEvent'),
+    'AffordabilityExpenseReversalEventList' => array('FieldValue' => array(), 'FieldType' => array('MWSFinancesService_Model_AffordabilityExpenseEvent'), 'ListMemberName' => 'AffordabilityExpenseEvent'),
     );
     parent::__construct($data);
     }
@@ -1359,6 +1365,198 @@ require_once (dirname(__FILE__) . '/../Model.php');
         foreach (func_get_args() as $ImagingServicesFeeEventList)
         {
             $this->_fields['ImagingServicesFeeEventList']['FieldValue'][] = $ImagingServicesFeeEventList;
+        }
+        return $this;
+    }
+
+    /**
+     * Get the value of the NetworkComminglingTransactionEventList property.
+     *
+     * @return List<NetworkComminglingTransactionEvent> NetworkComminglingTransactionEventList.
+     */
+    public function getNetworkComminglingTransactionEventList()
+    {
+        if ($this->_fields['NetworkComminglingTransactionEventList']['FieldValue'] == null)
+        {
+            $this->_fields['NetworkComminglingTransactionEventList']['FieldValue'] = array();
+        }
+        return $this->_fields['NetworkComminglingTransactionEventList']['FieldValue'];
+    }
+
+    /**
+     * Set the value of the NetworkComminglingTransactionEventList property.
+     *
+     * @param array networkComminglingTransactionEventList
+     * @return this instance
+     */
+    public function setNetworkComminglingTransactionEventList($value)
+    {
+        if (!$this->_isNumericArray($value)) {
+            $value = array ($value);
+        }
+        $this->_fields['NetworkComminglingTransactionEventList']['FieldValue'] = $value;
+        return $this;
+    }
+
+    /**
+     * Clear NetworkComminglingTransactionEventList.
+     */
+    public function unsetNetworkComminglingTransactionEventList()
+    {
+        $this->_fields['NetworkComminglingTransactionEventList']['FieldValue'] = array();
+    }
+
+    /**
+     * Check to see if NetworkComminglingTransactionEventList is set.
+     *
+     * @return true if NetworkComminglingTransactionEventList is set.
+     */
+    public function isSetNetworkComminglingTransactionEventList()
+    {
+                return !empty($this->_fields['NetworkComminglingTransactionEventList']['FieldValue']);
+            }
+
+    /**
+     * Add values for NetworkComminglingTransactionEventList, return this.
+     *
+     * @param networkComminglingTransactionEventList
+     *             New values to add.
+     *
+     * @return This instance.
+     */
+    public function withNetworkComminglingTransactionEventList()
+    {
+        foreach (func_get_args() as $NetworkComminglingTransactionEventList)
+        {
+            $this->_fields['NetworkComminglingTransactionEventList']['FieldValue'][] = $NetworkComminglingTransactionEventList;
+        }
+        return $this;
+    }
+
+    /**
+     * Get the value of the AffordabilityExpenseEventList property.
+     *
+     * @return List<AffordabilityExpenseEvent> AffordabilityExpenseEventList.
+     */
+    public function getAffordabilityExpenseEventList()
+    {
+        if ($this->_fields['AffordabilityExpenseEventList']['FieldValue'] == null)
+        {
+            $this->_fields['AffordabilityExpenseEventList']['FieldValue'] = array();
+        }
+        return $this->_fields['AffordabilityExpenseEventList']['FieldValue'];
+    }
+
+    /**
+     * Set the value of the AffordabilityExpenseEventList property.
+     *
+     * @param array affordabilityExpenseEventList
+     * @return this instance
+     */
+    public function setAffordabilityExpenseEventList($value)
+    {
+        if (!$this->_isNumericArray($value)) {
+            $value = array ($value);
+        }
+        $this->_fields['AffordabilityExpenseEventList']['FieldValue'] = $value;
+        return $this;
+    }
+
+    /**
+     * Clear AffordabilityExpenseEventList.
+     */
+    public function unsetAffordabilityExpenseEventList()
+    {
+        $this->_fields['AffordabilityExpenseEventList']['FieldValue'] = array();
+    }
+
+    /**
+     * Check to see if AffordabilityExpenseEventList is set.
+     *
+     * @return true if AffordabilityExpenseEventList is set.
+     */
+    public function isSetAffordabilityExpenseEventList()
+    {
+                return !empty($this->_fields['AffordabilityExpenseEventList']['FieldValue']);
+            }
+
+    /**
+     * Add values for AffordabilityExpenseEventList, return this.
+     *
+     * @param affordabilityExpenseEventList
+     *             New values to add.
+     *
+     * @return This instance.
+     */
+    public function withAffordabilityExpenseEventList()
+    {
+        foreach (func_get_args() as $AffordabilityExpenseEventList)
+        {
+            $this->_fields['AffordabilityExpenseEventList']['FieldValue'][] = $AffordabilityExpenseEventList;
+        }
+        return $this;
+    }
+
+    /**
+     * Get the value of the AffordabilityExpenseReversalEventList property.
+     *
+     * @return List<AffordabilityExpenseEvent> AffordabilityExpenseReversalEventList.
+     */
+    public function getAffordabilityExpenseReversalEventList()
+    {
+        if ($this->_fields['AffordabilityExpenseReversalEventList']['FieldValue'] == null)
+        {
+            $this->_fields['AffordabilityExpenseReversalEventList']['FieldValue'] = array();
+        }
+        return $this->_fields['AffordabilityExpenseReversalEventList']['FieldValue'];
+    }
+
+    /**
+     * Set the value of the AffordabilityExpenseReversalEventList property.
+     *
+     * @param array affordabilityExpenseReversalEventList
+     * @return this instance
+     */
+    public function setAffordabilityExpenseReversalEventList($value)
+    {
+        if (!$this->_isNumericArray($value)) {
+            $value = array ($value);
+        }
+        $this->_fields['AffordabilityExpenseReversalEventList']['FieldValue'] = $value;
+        return $this;
+    }
+
+    /**
+     * Clear AffordabilityExpenseReversalEventList.
+     */
+    public function unsetAffordabilityExpenseReversalEventList()
+    {
+        $this->_fields['AffordabilityExpenseReversalEventList']['FieldValue'] = array();
+    }
+
+    /**
+     * Check to see if AffordabilityExpenseReversalEventList is set.
+     *
+     * @return true if AffordabilityExpenseReversalEventList is set.
+     */
+    public function isSetAffordabilityExpenseReversalEventList()
+    {
+                return !empty($this->_fields['AffordabilityExpenseReversalEventList']['FieldValue']);
+            }
+
+    /**
+     * Add values for AffordabilityExpenseReversalEventList, return this.
+     *
+     * @param affordabilityExpenseReversalEventList
+     *             New values to add.
+     *
+     * @return This instance.
+     */
+    public function withAffordabilityExpenseReversalEventList()
+    {
+        foreach (func_get_args() as $AffordabilityExpenseReversalEventList)
+        {
+            $this->_fields['AffordabilityExpenseReversalEventList']['FieldValue'][] = $AffordabilityExpenseReversalEventList;
         }
         return $this;
     }
